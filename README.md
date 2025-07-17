@@ -1,4 +1,4 @@
-# 🛠️ Configurable Workflow Engine (State Machine API)
+#  Configurable Workflow Engine (State Machine API)
 
 This is a minimal .NET 8 Web API for defining and executing configurable workflows using state machines.
 
@@ -10,7 +10,7 @@ This is a minimal .NET 8 Web API for defining and executing configurable workflo
 - Inspect current state and history of any instance
 - In-memory storage, no database needed
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download)
@@ -28,23 +28,21 @@ dotnet run
 - `POST /instance/{id}/action/{actionId}` → transition state
 - `GET /instance/{id}` → inspect instance
 
-## 📌 Assumptions & Notes
+##  Assumptions & Notes
 
 - Only one initial state allowed per workflow.
 - Final states cannot be transitioned from.
 - Transitions are validated based on current state, action enablement, and allowed source states.
 - No persistence between restarts — data is in-memory only.
 
-## ⏳ TODO (with more time)
+## TODO (with more time)
 - Add unit tests.
 - Add Swagger UI or API documentation.
 - Persist definitions and instances to JSON/YAML files.
 
-## 📂 Folder Structure
+##  Folder Structure
 
 - `/Models` → Domain models: State, Action, WorkflowDefinition, WorkflowInstance
 - `/Services` → Core logic
 - `Program.cs` → Minimal API setup
 
-## License
-MIT
